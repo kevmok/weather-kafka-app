@@ -1,0 +1,30 @@
+{
+  "name": "weather-consumer",
+  "version": "0.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "dotenv -e ../../.env -- nodemon",
+    "lint": "eslint . --ext .js,.ts",
+    "lint:fix": "pnpm lint --fix",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "test": "jest",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "kafkajs": "^2.2.4",
+    "mongodb-data-api": "^0.4.0",
+    "shared-types": "workspace:*",
+    "tsconfig": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.12",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1",
+    "tsconfig": "^7.0.0",
+    "typescript": "^5.0.4"
+  }
+}

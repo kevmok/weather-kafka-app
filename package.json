@@ -1,0 +1,29 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "lint-format": "turbo run --parallel lint format ",
+    "lint-format:fix": "turbo run --parallel lint:fix format:fix",
+    "lint:fix": "eslint . --ext .js,.ts,.jsx,.tsx --fix",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "test": "turbo run --parallel test",
+    "typecheck": "turbo run --parallel typecheck",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@turbo/gen": "^1.9.7",
+    "dotenv-cli": "^7.2.1",
+    "eslint": "^7.32.0",
+    "eslint-config-custom": "workspace:*",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.2",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.8",
+    "turbo": "^1.9.7"
+  },
+  "packageManager": "pnpm@7.15.0",
+  "name": "weather-microservices"
+}

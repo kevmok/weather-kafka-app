@@ -1,0 +1,31 @@
+{
+  "name": "weather-producer",
+  "version": "0.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "dotenv -e ../../.env -- nodemon",
+    "lint": "eslint . --ext .js,.ts",
+    "lint:fix": "pnpm lint --fix",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "test": "jest",
+    "typecheck": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.12",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1",
+    "tsconfig": "workspace:*",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@types/cron": "^2.0.1",
+    "add": "^2.0.6",
+    "cron": "^2.3.1",
+    "kafkajs": "^2.2.4",
+    "shared-types": "workspace:*"
+  }
+}
